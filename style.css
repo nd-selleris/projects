@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    color: #263746;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #218fa6;
+}
+
+nav a {
+    color: #263746;
+    text-decoration: none;
+    margin-left: 22px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #218fa6;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin: 35px 8%;
+    padding: 35px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, #e0f5f5, #e9edff);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 38px;
+    margin-top: 0;
+}
+
+.hero p {
+    line-height: 1.6;
+}
+
+.hero img {
+    width: 43%;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #218fa6;
+    color: white;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.button:hover {
+    background: #176e82;
+    box-shadow: 0 5px 15px rgba(33, 143, 166, 0.3);
+    transform: translateY(-2px);
+}
+
+.sports-section,
+.info-section,
+.about-section {
+    margin: 55px 8%;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.section-intro {
+    color: #657583;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.card {
+    padding: 22px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(30, 60, 80, 0.06);
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(30, 60, 80, 0.12);
+}
+
+.emoji {
+    font-size: 32px;
+}
+
+.card p,
+.info-section p,
+.about-section p {
+    line-height: 1.6;
+}
+
+.info-section {
+    padding: 28px;
+    border-radius: 18px;
+    background: #eaf5f7;
+}
+
+.info-section li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+footer {
+    padding: 22px;
+    text-align: center;
+    background: #263746;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
